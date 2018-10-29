@@ -1,0 +1,30 @@
+
+[woost.extensions.locations.locationtype.LocationType.default_member_translation]
+
+    [values]
+
+        [continent]
+        ca: Continent
+        es: Continente
+        en: Continent
+
+        [country]
+        ca: País
+        es: País
+        en: Country
+
+        [autonomous_community]
+        ca: Comunitat autònoma
+        es: Comunidad autónoma
+        en: Autonomous community
+
+        [province]
+        ca: Província
+        es: Provincia
+        en: Province
+
+        [town]
+        ca: Població
+        es: Población
+        en: Town
+
