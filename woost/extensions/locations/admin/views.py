@@ -8,7 +8,7 @@ from woost.extensions.locations.location import Location
 
 locations_tree = Tree(
     "x_locations_tree",
-    children_collection = Location.locations
+    tree_relations = [Location.locations]
 )
 
 register_view(
