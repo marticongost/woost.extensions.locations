@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-u"""Defines the `Location` class.
+"""Defines the `Location` class.
 
 .. moduleauthor:: Martí Congost <marti.congost@whads.com>
 """
@@ -292,7 +292,7 @@ def translate_locale_component(locale, component, index, language = None):
                     discard_generic_translation = True
                 )
 
-            return u" - " + location_name
+            return " - " + location_name
 
     return base_translate_locale_component(
         locale,
