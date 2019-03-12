@@ -75,7 +75,7 @@ def _process_record(record, parent = None, context = None):
         location.location_type = record["type"]
 
         for lang, value in record["name"].items():
-            if isinstance(value, str):
+            if isinstance(value, bytes):
                 value = value.decode("utf-8")
             location.set("location_name", value, lang)
 
