@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-u"""
+"""
 
 .. moduleauthor:: Martí Congost <marti.congost@whads.com>
 """
@@ -25,7 +25,7 @@ class CountryReference(schema.Reference):
 
     def normalization(self, value):
 
-        if isinstance(value, basestring):
+        if isinstance(value, str):
             country = first(
                 Location.select({
                     "location_type": "country",

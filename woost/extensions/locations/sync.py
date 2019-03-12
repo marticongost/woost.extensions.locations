@@ -1,10 +1,10 @@
 #-*- coding: utf-8 -*-
-u"""
+"""
 
 .. moduleauthor:: Martí Congost <marti.congost@whads.com>
 """
 from time import time
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import json
 from cocktail.iteration import first
 from woost.models import Configuration, get_setting
@@ -31,7 +31,7 @@ def sync_locations():
     service.
     """
     service_uri = get_setting("x_locations_service_uri")
-    text_data = urllib.urlopen(service_uri).read()
+    text_data = urllib.request.urlopen(service_uri).read()
     json_data = json.loads(text_data)
 
     for record in json_data:
@@ -74,8 +74,8 @@ def _process_record(record, parent = None, context = None):
 
         location.location_type = record["type"]
 
-        for lang, value in record["name"].iteritems():
-            if isinstance(value, str):
+        for lang, value in record["name"].items():
+            if isinstance(value, bytes):
                 value = value.decode("utf-8")
             location.set("location_name", value, lang)
 
